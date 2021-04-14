@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shopFragment">
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.practice.shoppytd.ui.fragments.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shopFragment_to_addShopItemFragment"
+            app:destination="@id/addShopItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShopItemFragment"
+        android:name="com.practice.shoppytd.ui.fragments.AddShopItemFragment"
+        android:label="fragment_add_shop_item"
+        tools:layout="@layout/fragment_add_shop_item" >
+        <action
+            android:id="@+id/action_addShopItemFragment_to_imagePickFragment"
+            app:destination="@id/imagePickFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagePickFragment"
+        android:name="com.practice.shoppytd.ui.fragments.ImagePickFragment"
+        android:label="fragment_image_pick"
+        tools:layout="@layout/fragment_image_pick" />
+</navigation>
